@@ -34,6 +34,28 @@ h1 {
     align-items: center;
     text-align: center;
     background-color: rgb(214, 139, 116);
+    gap: 20px;
+}
+
+button {
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+}
+
+.time {
+    border: 3px solid rgb(87, 65, 59);
+    border-radius: 20px;
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 20px 15px;
 }
 
 .row2 {
@@ -45,9 +67,23 @@ h1 {
 
 .box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     justify-self: center;
     border: 3px solid rgb(87, 65, 59);
     height: 300px;
     width: 300px;
+}
+
+.box div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    cursor: pointer;
 }
