@@ -1,0 +1,53 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(235, 194, 182);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 130, 101);
+    padding: 40px 20px;
+}
+
+.gameInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 161, 141);
+    padding: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(214, 139, 116);
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    background-color: rgb(189, 129, 111);
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    border: 3px solid rgb(87, 65, 59);
+    height: 300px;
+    width: 300px;
+}
