@@ -12,11 +12,12 @@ body {
 }
 
 h1 {
+    font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(224, 130, 101);
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .gameInfo {
@@ -24,7 +25,7 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: rgb(228, 161, 141);
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .row {
@@ -44,6 +45,14 @@ button {
     cursor: pointer;
     height: 50px;
     width: 100px;
+    border: 3px solid rgb(87, 65, 59);
+    border-radius: 10px;
+}
+#start {
+    justify-self: end;
+}
+#reset {
+    justify-self: start;
 }
 
 .time {
@@ -55,7 +64,7 @@ button {
     font-size: 30px;
     font-weight: 600;
     line-height: 1.5em;
-    padding: 20px 15px;
+    padding: 15px;
 }
 
 .row2 {
@@ -63,6 +72,7 @@ button {
     grid-template-columns: 1fr 1fr;
     justify-self: center;
     background-color: rgb(189, 129, 111);
+    column-gap: 40px;
 }
 
 .box {
@@ -73,8 +83,17 @@ button {
     grid-template-rows: repeat(5, 1fr);
     justify-self: center;
     border: 3px solid rgb(87, 65, 59);
+    border-radius: 10px;
     height: 300px;
     width: 300px;
+    margin-top: 20px;
+}
+
+.full {
+    justify-self: end;
+}
+.empty {
+    justify-self: start;
 }
 
 .box div {
@@ -86,4 +105,52 @@ button {
     width: 54px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@media (max-width: 670px) {
+    h1 {
+        font-size: 25px;
+        padding: 4px;
+    }
+    .gameInfo {
+        padding: 4px;
+    }
+    .time {
+        font-size: 23px;
+        line-height: 1.1em;
+        padding: 10px;
+    }
+    button {
+        height: 40px;
+        width: 55px;
+    }
+    .row2 {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .box {
+        margin-top: 5px;
+        height: 260px;
+        width: 260px;
+    }
+    .box div {
+        height: 45px;
+        width: 45px;
+    }
+    .full,
+    .empty {
+        justify-self: center;
+    }
+}
+
+@media (min-width: 991px) {
+    .box {
+        margin-top: 20px;
+        height: 350px;
+        width: 350px;
+    }
+    .box div {
+        height: 60px;
+        width: 60px;
+    }
 }
