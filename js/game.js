@@ -16,16 +16,33 @@ const emptyBox = document.querySelector(`.empty`);
 
 let balls = [];
 start.addEventListener(`click`, () => {
-    for (let i = 0; i < 25; i++) {
-        let ball = {};
-        ball.color = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${this.rand(50, 255)}, ${this.rand(80, 255)}, ${this.rand(0, 0)}), #000)`;
-        ball.number = rand(1, 25);
-        balls.push(ball);
-
+    while (balls.length < 25) {
         const newBall = document.createElement('div');
-        newBall.style = ball.color;
-        const nr = document.createTextNode(ball.number);
-        newBall.appendChild(nr);
+        newBall.style = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${this.rand(50, 255)}, ${this.rand(80, 255)}, ${this.rand(0, 0)}), #000)`;
+        const randomNumber = rand(1, 25);
+        if(balls.includes(randomNumber)) {
+            continue;
+        } else {
+            newBall.innerText = randomNumber;
+            balls.push(randomNumber);
+        }
         fullBox.appendChild(newBall);
     }
 }, {once : true});
+
+
+// let balls = [];
+// start.addEventListener(`click`, () => {
+//     for (let i = 0; i < 25; i++) {
+//         let ball = {};
+//         ball.color = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${this.rand(50, 255)}, ${this.rand(80, 255)}, ${this.rand(0, 0)}), #000)`;
+//         const random = rand(1, 25);
+//         ball.number = random;
+
+//         const newBall = document.createElement('div');
+//         newBall.style = ball.color;
+//         const nr = document.createTextNode(ball.number);
+//         newBall.appendChild(nr);
+//         fullBox.appendChild(newBall);
+//     }
+// }, {once : true});
