@@ -18,12 +18,12 @@ let balls = [];
 start.addEventListener(`click`, () => {
     for (let i = 0; i < 25; i++) {
         let ball = {};
-        ball.color = `rgb(${this.rand(20, 255)}, ${this.rand(20, 255)}, ${this.rand(20, 255)})`;
+        ball.color = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${this.rand(50, 255)}, ${this.rand(80, 255)}, ${this.rand(0, 0)}), #000)`;
         ball.number = rand(1, 25);
         balls.push(ball);
 
         const newBall = document.createElement('div');
-        newBall.style.backgroundColor = ball.color;
+        newBall.style = ball.color;
         const nr = document.createTextNode(ball.number);
         newBall.appendChild(nr);
         fullBox.appendChild(newBall);

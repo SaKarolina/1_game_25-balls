@@ -124,11 +124,11 @@ button {
     display: grid;
     justify-items: center;
     align-items: center;
-    border: 1px solid black;
     height: 52px;
     width: 52px;
     border-radius: 50%;
     cursor: pointer;
+    font-weight: 800;
 }
 
 @media (max-width: 718px) {
