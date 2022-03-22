@@ -28,6 +28,7 @@ start.addEventListener(`click`, () => {
         }
         fullBox.appendChild(newBall);
     }
+
 }, {once : true});
 
 
