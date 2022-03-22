@@ -82,6 +82,8 @@ button {
     padding: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
+    height: 75px;
+    width: 144.4px;
 }
 
 .row2 {
@@ -142,6 +144,7 @@ button {
         font-size: 23px;
         line-height: 1.1em;
         padding: 8px;
+        height: 55px;
     }
     button {
         height: 40px;
