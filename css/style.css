@@ -59,7 +59,7 @@ button {
     background-color: rgb(218, 174, 138);
     border-radius: 10px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5em;
 }
 #start {
@@ -77,20 +77,21 @@ button {
     justify-self: center;
     align-items: center;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 450;
     line-height: 1.5em;
     padding: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
     height: 75px;
-    width: 144.4px;
+    width: 144px;
 }
 
 .row2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-self: center;
-    backdrop-filter: blur(50px);
+    background: rgb(142,73,27);
+    background: linear-gradient(90deg, rgba(142,73,27,0.98) 0%, rgba(199,119,49,0.98) 51%, rgba(156,82,17,0.98) 99%);
     column-gap: 40px;
     margin-left: 20px;
     margin-right: 20px;
@@ -104,7 +105,6 @@ button {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     justify-self: center;
-    backdrop-filter: blur(50px);
     border-radius: 10px;
     height: 300px;
     width: 300px;
@@ -133,7 +133,7 @@ button {
 
 .box div:hover {
     animation: shake 0.6s;
-    animation-iteration-count: 1.5s;
+    animation-iteration-count: 0.8s;
 }
 
 @keyframes shake {
@@ -148,6 +148,11 @@ button {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@media (max-width: 420px) {
+    .time {
+        width: 110px;
+    }
 }
 
 @media (max-width: 718px) {

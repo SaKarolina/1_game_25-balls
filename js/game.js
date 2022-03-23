@@ -13,6 +13,7 @@ const reset = document.querySelector(`#reset`);
 const time = document.querySelector(`.time`);
 const fullBox = document.querySelector(`.full`);
 const emptyBox = document.querySelector(`.empty`);
+time.innerText = "00:00:00"
 
 let balls = [];
 start.addEventListener(`click`, () => {
@@ -29,7 +30,25 @@ start.addEventListener(`click`, () => {
         fullBox.appendChild(newBall);
     }
 
+    let clockTime = 0;
+    function runClock() {
+        clockTime++;
+        const cl1 = Math.floor(clockTime / 6000);
+        const cl2 = Math.floor((clockTime - cl1 * 6000) / 600);
+        const cl3 = Math.floor((clockTime - cl1 * 6000 - cl2 * 600) / 100);
+        const cl4 = Math.floor((clockTime - cl1 * 6000 - cl2 * 600 - cl3 * 100) / 10);
+        const cl5 = Math.floor(clockTime % 10);
+
+        time.innerText = `${cl1}${cl2}:${cl3}${cl4}:${cl5}0`;
+    }
+    setInterval(runClock, 100)
+
 }, {once : true});
+
+// reset.addEventListener("click", () => {
+//     balls.length = 0;
+//     console.log(balls);
+// });
 
 
 // let balls = [];
