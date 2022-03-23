@@ -17,6 +17,7 @@ time.innerText = "00:00:00"
 
 let balls = [];
 start.addEventListener(`click`, () => {
+
     while (balls.length < 25) {
         const newBall = document.createElement('div');
         newBall.style = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${this.rand(50, 255)}, ${this.rand(80, 255)}, ${this.rand(0, 0)}), #000)`;
@@ -41,14 +42,20 @@ start.addEventListener(`click`, () => {
 
         time.innerText = `${cl1}${cl2}:${cl3}${cl4}:${cl5}0`;
     }
-    setInterval(runClock, 100)
+    let startClock = setInterval(runClock, 100)
+
+    reset.addEventListener(`click`, () => {
+        if(balls.length > 0) {
+            balls.splice(0, balls.length);
+            fullBox.innerHTML = ``;
+            emptyBox.innerHTML = ``;
+            clearInterval(startClock);
+            time.innerText = "00:00:00";
+        }
+    });
 
 }, {once : true});
 
-// reset.addEventListener("click", () => {
-//     balls.length = 0;
-//     console.log(balls);
-// });
 
 
 // let balls = [];
